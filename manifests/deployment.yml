@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: helperaksplatformengineering 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helperaksplatformengineering
+  template:
+    metadata:
+      labels:
+        app: helperaksplatformengineering 
+    spec:
+      containers:
+        - name: helperaksplatformengineering 
+          image: jonghocontainer.azurecr.io/helperaksplatformengineering
+          ports:
+          - containerPort: 80
